@@ -58,10 +58,10 @@ def get_random_index(weights):
         accumulated_weights.append(accumulated_weights[i] + weights[i])
         
     for e in range(len(weights)):
-        r=np.random.rand()  # generate a random number
+        r = np.random.rand()  # generate a random number
         
         for i in range(len(weights)):
-            if r > accumulated_weights[i] and  r < accumulated_weights[i+1]:
+            if r > accumulated_weights[i] and r < accumulated_weights[i+1]:
                 index.append(i)
     
     return index
